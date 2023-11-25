@@ -49,9 +49,11 @@ function initializeUI() {
   if (savedURLs.length > 0) {
     enteredUrlsDiv.innerHTML = "";
 
-    savedURLs.forEach(function (entry) {
-      enteredUrlsDiv.appendChild(createURLStats(entry.url, entry.status));
-    });
+    for (var i = savedURLs.length - 1; i >= 0; i--) {
+      enteredUrlsDiv.appendChild(
+        createURLStats(savedURLs[i].url, savedURLs[i].status)
+      );
+    }
 
     noUrlEnteredDiv.style.display = "none";
   } else {
