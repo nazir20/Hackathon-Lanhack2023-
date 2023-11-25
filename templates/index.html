@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <title>Lanhack 2023</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body>
 
-    
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Lanhack 2023</h1>
+            <div id="theme-btn">
+                <p id="theme-title">DARK</p>
+                <div class="icon-container"><img id="theme-icon" src="/static/assets/icon-moon.svg" alt=""></div>
+            </div>
+        </header>
+        <main>
+            <div id="app">
+                <div class="searchbar-container active">
+                    <input type="search" name="url" id="url-input" placeholder="Paste The Url..." required>
+                    <button class="btn-search" id="submit">Check</button>
+                </div>
+                <div class="url-container">
+                    <div id="entered-urls" class="url-content">
+                        <!-- <div class="url-stats-wrapper">
+                            <div class="url-stat">
+                                <img src="/static/assets/true-check.png" alt="true-check">
+                                <a href="#" target="_blank" class="url">https://colorhunt.co/palettes/orange</a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div id="no-url-entered">
+                        <h2>Catch Malicious URLs with Precision</h2>
+                        <p>Experience Cutting-Edge Malicious URL Detection Powered by Machine Learning</p>
+                        <img src="/static/assets/spam-url.png" alt="spam">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>@copyright Lanhack2023</p>
+        </footer>
+    </div>
     <script src="/static/js/app.js"></script>
 </body>
 </html>
