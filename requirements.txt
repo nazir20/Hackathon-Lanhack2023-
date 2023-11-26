@@ -1,0 +1,6 @@
+flask
+flask-wtf
+numpy
+scipy
+pandas
+scikit-learn
