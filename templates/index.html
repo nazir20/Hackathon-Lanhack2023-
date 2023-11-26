@@ -1,51 +1,150 @@
+{% from "_formhelpers.html" import render_field %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <title>Lanhack 2023</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/public/stylee.css">
+    <!-- Bootstrap Js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/812fd4bca0.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./public/assets/Flag_of_India.png" type="image/x-icon">
+    <title>MalULR | Home</title>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1 class="title">Lanhack 2023</h1>
-            <div id="theme-btn">
-                <p id="theme-title">DARK</p>
-                <div class="icon-container"><img id="theme-icon" src="/static/assets/icon-moon.svg" alt=""></div>
+    <section id="header">
+        <div class="header__navbar">
+            <a class="logo" href="/" style="color: #212A3E;">MalULR</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-6 header__content mb-5">
+                <h1>Welcome to <span><i class="fas fa-quote-left"></i> MalULR Detection</span></h1>
+                <p>A detection model uses machine learning to identify specific patterns or objects in data. It's trained on labeled examples to learn distinctive features for each class. When applied to new data, the model compares features and assigns probabilities for each class, determining the detected object's category. </p>
+                <p> These models find applications in computer vision, natural language processing, and cybersecurity for detecting various entities and events.</p>
+                <a href="#form-section">Get Started</a>
             </div>
-        </header>
-        <main>
-            <div id="app">
-                <div class="searchbar-container active">
-                    <input type="search" name="url" id="url-input" placeholder="Paste The Url..." required>
-                    <button class="btn-search" id="submit">Check</button>
-                </div>
-                <div class="url-container">
-                    <div id="entered-urls" class="url-content">
-                        <!-- <div class="url-stats-wrapper">
-                            <div class="url-stat">
-                                <img src="/static/assets/true-check.png" alt="true-check">
-                                <a href="#" target="_blank" class="url">https://colorhunt.co/palettes/orange</a>
-                            </div>
-                        </div> -->
+            <div class="col-lg-6 mb-5">
+                <img src="/static/public/assets/headerr2.png" alt="Traffic" width="100%">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="card">
+                        <img src="/static/public/assets/url.png" alt="car" width="50%">
+                        <h4 style="color:#6C63FF;">Do You Know URL ?</h4>
+                        <p class="pb-1">URL stands for Unified Resource Locator, which represents the address of a resource on the internet. Let's explore what a typical URL looks like. The uniqueness of a URL is defined by the inclusion of the HTTP link. Unfortunately, scammers and attackers can exploit vulnerable individuals using URLs. The HTTP protocol is universally adopted by networks worldwide, facilitating all transmissions within the World Wide Web. Moreover, understanding the components of a URL can help users navigate the internet more effectively and identify potential security risks. By being cautious and verifying the legitimacy of URLs, individuals can better protect themselves from falling victim to online scams and attacks. It is important to detect them before they breach our network.</p>
                     </div>
-                    <div id="no-url-entered">
-                        <h2>Catch Malicious URLs with Precision</h2>
-                        <p>Experience Cutting-Edge Malicious URL Detection Powered by Machine Learning</p>
-                        <img src="/static/assets/spam-url.png" alt="spam">
+                </div>
+
+                <div class="col-lg-4 mb-5">
+                    <div class="card">
+                        <img src="/static/public/assets/bg3.png" alt="car" width="50%">
+                        <h4 style="color:#6C63FF;">How Can Machine Learning Algorithms Help?</h4>
+                        <p>
+ML algorithms are helpful in detecting fraudulent or malicious URLs and enhancing internet safety. These algorithms extract relevant features from URLs, analyze historical data to learn patterns, and classify URLs as safe or unsafe in real-time. By continuously learning and employing ensemble methods, they improve their detection accuracy and adapt to evolving threats. Moreover, ML algorithms can also analyze user behavior, identifying anomalies that may indicate potential risks. </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-5">
+                    <div class="card">
+                        <img src="/static/public/assets/bg4.jpeg" alt="car" width="50%">
+                        <h4 style="color:#6C63FF;">How Our Detection Model Works?</h4>
+                        <p>A detection model uses machine learning to identify specific patterns or objects in data. It's trained on labeled examples to learn distinctive features for each class. When applied to new data, the model compares features and assigns probabilities for each class, determining the detected object's category. These models find applications in computer vision, natural language processing, and cybersecurity for detecting various entities and events.
+                        Our model powered by Logistic Regression helps in detecting the Malicious and Non-malicious URLs.</p>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <p>@copyright Lanhack2023</p>
-        </footer>
+        </div>
+    </section>
+
+
+
+    <section id="form-section" class="reveal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 form-div">
+                    <div id="picture-form" class="form">
+                        <img src="/static/public/assets/url2.png" alt="image" width="50%">
+                        <h3>Upload URL</h3>
+
+<div class="text-center" style="margin-top: 20px;">
+    <form method="POST" action="/" class="jumbotron center">
+       <span>
+        {{ form.csrf_token }}
+        {{ render_field(form.url) }}
+ <button type="submit">DETECT URL</button>
+                          
+        </span>
+    </form>
+</div>
+    <div class="jumbotron text-center">
+    <p> The submitted URL is: {{ url }} </p>
+    <p> <b>The prediction is : {{ status }}</b></p>
+    <br>
+
     </div>
-    <script src="/static/js/app.js"></script>
+
+                    </div>
+                  
+                </div>
+                <div class="col-lg-6 pic-div">
+                    <img src="/static/public/assets/result3.webp" alt="pic" width="70%">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <p>&copy; Copyright 2023 | KEEP YOUR NETWORK SAFE!</p>
+    </section>
+
+    <script>
+        document.getElementById('upload-video').addEventListener('click', ()=>{
+            document.getElementById('picture-form').style.display = 'none';
+            document.getElementById('video-form').style.display = 'block';
+        });
+
+        document.getElementById('upload-picture').addEventListener('click', () => {
+            document.getElementById('picture-form').style.display = 'block';
+            document.getElementById('video-form').style.display = 'none';
+        });
+    </script>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+    </script>
+
+    <script src="/static/public/index.js"></script>
 </body>
 </html>

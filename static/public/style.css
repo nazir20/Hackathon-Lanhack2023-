@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background: #4776E6;
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+    background: linear-gradient(to right, #8E54E9, #4776E6);
+    padding: 2% 7%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.header-content {
+    padding: 7%;
+    color: #fff;
+}
+
+.header-content p {
+    padding: 1% 10%;
+    text-align: justify;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #6528F7;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: 0.5s ease;
+}
+
+.header-content a:hover {
+    background-color: #fff;
+    color: #6528F7;
+}
+
+.header-content .img1 {
+    position: absolute;
+    right: 12%;
+    bottom: 25%;
+    width: 80px;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#about {
+    margin: 5% 1% 7%;
+}
+#about .card {
+    border: none;
+    padding: 7%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#about .card p {
+    text-align: justify;
+}
+
+#about .card h4{
+    color: #6528F7;
+}
+
+#about .card:hover {
+    background-color: #ECF2FF;
+}
+
+#how {
+    background-color: #ECF2FF;
+    padding: 4% 1% 7%;
+}
+
+footer {
+    background: #4776E6;
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+    background: linear-gradient(to right, #8E54E9, #4776E6);
+    color: #fff;
+}
+
+/* Login & Signup Page */
+.login-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-div .card {
+    width: 30%;
+    padding: 4%;
+    margin-top: -70px;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.login-div .card button {
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #6528F7;
+    border-radius: 7px;
+    padding: 8px;
+    border: 2px solid transparent;
+    transition: 0.5s ease;
+}
+
+.login-div .card button:hover {
+    background-color: #fff;
+    color: #6528F7;
+    border-color: #6528F7;
+}
+
+.login-div .survey {
+    width: 40%;
+    padding: 4%;
+    margin-top: -130px;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
